@@ -98,7 +98,7 @@ from django.conf import settings
 if not settings.configured:
     settings.configure(**{k: v for k, v in globals().items() if k.isupper()})
 
-from django.conf.urls import *
+from django.conf.urls.defaults import *
 from django.contrib import admin
 urlpatterns = patterns("",
     url(r"^static/(?P<path>.*)$", 'django.contrib.staticfiles.views.serve', {'insecure': True}),
